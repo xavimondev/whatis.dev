@@ -1,26 +1,97 @@
 ---
-import "@fontsource/space-grotesk/400.css"
-import "@fontsource/space-grotesk/600.css"
-import "@fontsource/space-grotesk/700.css"
+import '@fontsource/space-grotesk/400.css'
+import '@fontsource/space-grotesk/600.css'
+import '@fontsource/space-grotesk/700.css'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-		<style>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>whatis.dev</title>
+    <style>
       body {
         font-family: 'Space Grotesk', sans-serif;
         font-weight: normal;
         font-style: normal;
         font-display: optional;
+        background-color: hsl(250, 24%, 9%);
       }
     </style>
-	</head>
-	<body>
-		<h1 class="font-bold text-2xl">Astro</h1>
-	</body>
+  </head>
+  <body>
+    <main class='w-full max-w-6xl p-6 m-auto min-h-screen grid place-items-center'>
+      <div class='flex flex-col text-center gap-4 w-full justify-center max-w-full sm:max-w-lg'>
+        <h1 class='text-white text-4xl sm:text-5xl font-bold'>whatis.dev</h1>
+        <p class='text-gray-200 text-lg sm:text-1xl mb-2'>Enter a term to learn more about it</p>
+        <form class='flex items-center w-full justify-center'>
+          <div class='relative flex items-center w-full border-2 rounded-2xl'>
+            <div class='absolute inset-y items-center pl-3'>
+              <svg
+                class='w-7 h-7 text-gray-300'
+                fill='none'
+                shape-rendering='geometricPrecision'
+                stroke='currentColor'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='1.5'
+                viewBox='0 0 24 24'
+                width='24'
+                ><path d='M11 17.25a6.25 6.25 0 110-12.5 6.25 6.25 0 010 12.5z'></path><path
+                  d='M16 16l4.5 4.5'></path></svg
+              >
+            </div>
+            <input
+              type='text'
+              autofocus
+              class='pl-12 p-2.5 w-full border-none bg-transparent h-12 text-lg outline-none text-gray-300 font-semibold selection:bg-indigo-700'
+            />
+          </div>
+        </form>
+        <!-- Suggestions -->
+        <div class='mt-2 sm:max-w-lg'>
+          <ul class='flex gap-3 flex-wrap'>
+            <li>
+              <button
+                class='bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110'
+                >PR</button
+              >
+            </li>
+            <li>
+              <button
+                class='bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110'
+                >Scrapping</button
+              >
+            </li>
+            <li>
+              <button
+                class='bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110'
+                >Typo</button
+              >
+            </li>
+            <li>
+              <button
+                class='bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110'
+                >Middleware</button
+              >
+            </li>
+            <li>
+              <button
+                class='bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110'
+                >IDE</button
+              >
+            </li>
+            <li>
+              <button
+                class='bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110'
+                >CMS</button
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
