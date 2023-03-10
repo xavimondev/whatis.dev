@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": "pr",
+      "name": "Pull Request",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "PR stands for Pull Request - which means you are sending all the features you have worked to the remote repository"
+        },
+        {
+          "id": "m2",
+          "description": "Pull Requests are a mechanism for a developer to notify team members that they have completed a feature."
+        }
+      ],
+      "links": [
+        {
+          "lang": "en",
+          "type": "doc",
+          "resource": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"
+        },
+        {
+          "lang": "en",
+          "type": "doc",
+          "resource": "https://www.gitkraken.com/learn/git/tutorials/what-is-a-pull-request-in-git"
+        },
+        {
+          "lang": "es",
+          "type": "video",
+          "resource": "https://youtu.be/BPns9r76vSI"
+        },
+        {
+          "lang": "en",
+          "type": "video",
+          "resource": "https://youtu.be/z8CYDyFqzp0"
+        }
+      ]
+    }
+  ]
+}
