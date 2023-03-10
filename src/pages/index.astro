@@ -2,6 +2,7 @@
 import '@fontsource/space-grotesk/400.css'
 import '@fontsource/space-grotesk/600.css'
 import '@fontsource/space-grotesk/700.css'
+import Search from '../components/Search.svelte'
 ---
 
 <html lang='en'>
@@ -26,30 +27,7 @@ import '@fontsource/space-grotesk/700.css'
       <section class='flex flex-col text-center gap-4 w-full justify-center max-w-full sm:max-w-lg'>
         <h1 class='text-white text-4xl sm:text-5xl font-bold'>whatis.dev</h1>
         <p class='text-gray-200 text-lg sm:text-1xl mb-2'>Enter a term to learn more about it</p>
-        <form class='flex items-center w-full justify-center'>
-          <div class='relative flex items-center w-full border-2 rounded-2xl'>
-            <div class='absolute inset-y items-center pl-3'>
-              <svg
-                class='w-7 h-7 text-gray-300'
-                fill='none'
-                shape-rendering='geometricPrecision'
-                stroke='currentColor'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='1.5'
-                viewBox='0 0 24 24'
-                width='24'
-                ><path d='M11 17.25a6.25 6.25 0 110-12.5 6.25 6.25 0 010 12.5z'></path><path
-                  d='M16 16l4.5 4.5'></path></svg
-              >
-            </div>
-            <input
-              type='text'
-              autofocus
-              class='pl-12 p-2.5 w-full border-none bg-transparent h-12 text-lg outline-none text-gray-300 font-semibold selection:bg-indigo-500'
-            />
-          </div>
-        </form>
+        <Search client:visible />
         <!-- Suggestions -->
         <div class='mt-2 sm:max-w-lg'>
           <ul class='flex gap-3 flex-wrap'>
