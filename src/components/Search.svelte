@@ -1,24 +1,26 @@
 <script>
   import data from '../data/data.json'
+  import { termDataStore } from '../state/store.js'
   const listOfTerms = data.data
 
-  let val = ''
   let timer
-  let termFound = {}
+  let termDataFound = {}
 
   const debounce = (v) => {
     clearTimeout(timer)
     timer = setTimeout(() => {
-      termFound = listOfTerms.find((term) => term.name.includes(v.toLowerCase()))
-      console.log(termFound)
-      val = v
+      termDataFound = listOfTerms.find((term) => term.name.toLowerCase().includes(v.toLowerCase()))
+      termDataStore.set(termDataFound)
     }, 500)
   }
 
   const handleChange = (e) => {
     const value = e.target.value
+    if (!value) {
+      termDataStore.set(undefined)
+      return
+    }
     debounce(value)
-    // console.log(value)
   }
 </script>
 
@@ -42,10 +44,9 @@
     </div>
     <input
       on:input={handleChange}
-      type="text"
+      type="search"
       placeholder="Enter your term"
       class="pl-12 p-2.5 w-full border-none bg-transparent h-12 text-lg outline-none text-gray-300 font-semibold selection:bg-indigo-500"
     />
-    <!-- {val} -->
   </div>
 </form>
