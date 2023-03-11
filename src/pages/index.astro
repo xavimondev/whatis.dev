@@ -4,6 +4,7 @@ import '@fontsource/space-grotesk/600.css'
 import '@fontsource/space-grotesk/700.css'
 import Results from '../components/Results.svelte'
 import Search from '../components/Search.svelte'
+import Suggestions from '../components/Suggestions.svelte'
 ---
 
 <html lang='en'>
@@ -29,47 +30,7 @@ import Search from '../components/Search.svelte'
         <h1 class='text-white text-4xl sm:text-5xl font-bold'>whatis.dev</h1>
         <p class='text-gray-200 text-lg sm:text-1xl mb-2'>Enter a term to learn more about it</p>
         <Search client:visible />
-        <!-- Suggestions -->
-        <div class='mt-2 sm:max-w-lg'>
-          <ul class='flex gap-3 flex-wrap'>
-            <li>
-              <button
-                class='bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110'
-                >PR</button
-              >
-            </li>
-            <li>
-              <button
-                class='bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110'
-                >Web Scrapping</button
-              >
-            </li>
-            <li>
-              <button
-                class='bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110'
-                >Typo</button
-              >
-            </li>
-            <li>
-              <button
-                class='bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110'
-                >Middleware</button
-              >
-            </li>
-            <li>
-              <button
-                class='bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110'
-                >IDE</button
-              >
-            </li>
-            <li>
-              <button
-                class='bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110'
-                >CMS</button
-              >
-            </li>
-          </ul>
-        </div>
+        <Suggestions client:visible />
       </section>
       <!-- Meaning -->
       <Results client:visible />
