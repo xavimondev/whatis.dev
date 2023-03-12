@@ -1,4 +1,5 @@
 <script>
+  import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
   import data from '../data/data.json'
   import { termDataStore } from '../state/store.js'
   const listOfTerms = data.data
@@ -6,18 +7,26 @@
   let timer
   let termDataFound = {}
 
-  const debounce = (v) => {
+  const debounce = (value) => {
     clearTimeout(timer)
     timer = setTimeout(() => {
-      termDataFound = listOfTerms.find((term) => term.name.toLowerCase().includes(v.toLowerCase()))
+      termDataFound = listOfTerms.find((term) =>
+        term.name.toLowerCase().includes(value.toLowerCase())
+      )
       termDataStore.set(termDataFound)
-    }, 500)
+      if (termDataFound) {
+        updateQueryParams(value)
+      } else {
+        removeQueryParams('q')
+      }
+    }, 300)
   }
 
   const handleChange = (e) => {
     const value = e.target.value
     if (!value) {
       termDataStore.set(undefined)
+      removeQueryParams('q')
       return
     }
     debounce(value)
