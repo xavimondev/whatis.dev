@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte'
   import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
   import data from '../data/data.json'
   import { termDataStore } from '../state/store.js'
@@ -31,6 +32,16 @@
     }
     debounce(value)
   }
+
+  onMount(() => {
+    const url = new URL(window.location.href)
+    const query = url.searchParams.get('q')
+    const hasQuery = Boolean(query)
+    if (hasQuery) {
+      termDataFound = listOfTerms.find((term) => term.name.toLowerCase().includes(query))
+      termDataStore.set(termDataFound)
+    }
+  })
 </script>
 
 <form class="flex items-center w-full justify-center">
