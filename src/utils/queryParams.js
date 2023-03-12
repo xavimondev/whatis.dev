@@ -1,7 +1,6 @@
 export const updateQueryParams = (newQuery) => {
   const url = new URL(window.location.href)
   const params = new URLSearchParams(url.search.slice(1))
-  console.log(params)
   params.set('q', newQuery)
 
   url.search = params.toString()
