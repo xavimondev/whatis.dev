@@ -1,7 +1,7 @@
 <script>
   import Definitions from './Definitions.svelte'
   import Links from './Links.svelte'
-  import { termDataStore } from '../state/store.js'
+  import { termDataStore, inputStore } from '../state/store.js'
 </script>
 
 {#if $termDataStore}
@@ -15,4 +15,10 @@
       <Links />
     </div>
   </section>
+{/if}
+
+{#if $termDataStore == undefined && $inputStore !== ''}
+  <p class="font-semibold text-xl sm:text-2xl text-white flex items-center gap-1">
+    There is not result for: <span class="text-indigo-900 font-semibold">{$inputStore}</span> 🥲
+  </p>
 {/if}

@@ -2,11 +2,11 @@
   import { onMount } from 'svelte'
   import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
   import data from '../data/data.json'
-  import { termDataStore } from '../state/store.js'
+  import { termDataStore, inputStore } from '../state/store.js'
   const listOfTerms = data.data
 
   let timer
-  let termDataFound = {}
+  let termDataFound = undefined
 
   const debounce = (value) => {
     clearTimeout(timer)
@@ -18,6 +18,7 @@
       if (termDataFound) {
         updateQueryParams(value)
       } else {
+        inputStore.set(value)
         removeQueryParams('q')
       }
     }, 300)
@@ -27,6 +28,7 @@
     const value = e.target.value
     if (!value) {
       termDataStore.set(undefined)
+      inputStore.set('')
       removeQueryParams('q')
       return
     }
@@ -44,7 +46,7 @@
   })
 </script>
 
-<form class="flex items-center w-full justify-center">
+<div class="flex items-center w-full justify-center">
   <div class="relative flex items-center w-full border-2 rounded-2xl">
     <div class="absolute inset-y items-center pl-3">
       <svg
@@ -64,9 +66,9 @@
     </div>
     <input
       on:input={handleChange}
-      type="search"
+      type="input"
       placeholder="Enter your term"
       class="pl-12 p-2.5 w-full border-none bg-transparent h-12 text-lg outline-none text-gray-300 font-semibold selection:bg-indigo-500"
     />
   </div>
-</form>
+</div>

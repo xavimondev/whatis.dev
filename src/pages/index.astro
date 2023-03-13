@@ -2,9 +2,7 @@
 import '@fontsource/space-grotesk/400.css'
 import '@fontsource/space-grotesk/600.css'
 import '@fontsource/space-grotesk/700.css'
-import Results from '../components/Results.svelte'
-import Search from '../components/Search.svelte'
-import Suggestions from '../components/Suggestions.svelte'
+import Main from '../components/Main.svelte'
 ---
 
 <html lang='en'>
@@ -26,14 +24,7 @@ import Suggestions from '../components/Suggestions.svelte'
   </head>
   <body>
     <main class='w-full max-w-6xl p-6 m-auto min-h-screen grid place-items-center'>
-      <section class='flex flex-col text-center gap-4 w-full justify-center max-w-full sm:max-w-lg'>
-        <h1 class='text-white text-4xl sm:text-5xl font-bold'>whatis.dev</h1>
-        <p class='text-gray-200 text-lg sm:text-1xl mb-2'>Enter a term to learn more about it</p>
-        <Search client:visible />
-        <Suggestions client:visible />
-      </section>
-      <!-- Meaning -->
-      <Results client:visible />
+      <Main client:load />
     </main>
   </body>
 </html>
