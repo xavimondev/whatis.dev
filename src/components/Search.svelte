@@ -7,6 +7,7 @@
 
   let timer
   let termDataFound = undefined
+  let inputValue = ''
 
   const debounce = (value) => {
     clearTimeout(timer)
@@ -42,6 +43,7 @@
     if (hasQuery) {
       termDataFound = listOfTerms.find((term) => term.name.toLowerCase().includes(query))
       termDataStore.set(termDataFound)
+      inputValue = query
     }
   })
 </script>
@@ -64,9 +66,12 @@
         /></svg
       >
     </div>
+    <!-- svelte-ignore a11y-autofocus -->
     <input
       on:input={handleChange}
+      bind:value={inputValue}
       type="input"
+      autofocus
       placeholder="Enter your term"
       class="pl-12 p-2.5 w-full border-none bg-transparent h-12 text-lg outline-none text-gray-300 font-semibold selection:bg-indigo-500"
     />
