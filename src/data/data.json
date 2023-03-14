@@ -26,8 +26,165 @@
         },
         {
           "type": "video",
-          "name": "Youtube",
+          "name": "Simplilearn",
           "resource": "https://youtu.be/z8CYDyFqzp0"
+        }
+      ]
+    },
+    {
+      "id": "devops",
+      "name": "DevOps",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "DevOps combines development (Dev) and operations (Ops) to unite people, process, and technology in application planning, development, delivery, and operations."
+        },
+        {
+          "id": "m2",
+          "description": "DevOps enables coordination and collaboration between roles like development, IT operations, quality engineering, and security."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "Amazon",
+          "resource": "https://aws.amazon.com/devops/what-is-devops/"
+        },
+        {
+          "type": "doc",
+          "name": "Microsoft",
+          "resource": "https://learn.microsoft.com/en-us/devops/what-is-devops"
+        }
+      ]
+    },
+    {
+      "id": "ide",
+      "name": "IDE",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "An integrated development environment (IDE) is a software application that helps programmers develop software code efficiently."
+        },
+        {
+          "id": "m2",
+          "description": "IDEs increase programmer productivity by combining common activities of writing software into a single application: editing source code, building executables, and debugging."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "Amazon",
+          "resource": "https://aws.amazon.com/what-is/ide/"
+        },
+        {
+          "type": "doc",
+          "name": "Codecademy",
+          "resource": "https://www.codecademy.com/article/what-is-an-ide"
+        }
+      ]
+    },
+    {
+      "id": "ux",
+      "name": "UX",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "UX stands for User Experience, and when we say “User Experience”,  we’re referring to how people interact with a product."
+        },
+        {
+          "id": "m2",
+          "description": "UX focuses on having a deep understanding of users, what they need, what they value, their abilities, and also their limitations."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "Adobe",
+          "resource": "https://xd.adobe.com/ideas/career-tips/what-is-ux-design/"
+        }
+      ]
+    },
+    {
+      "id": "ci",
+      "name": "CI",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "Continuous integration (CI) is a DevOps software development practice where developers regularly merge their code changes into a central repository."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "Atlassian",
+          "resource": "https://www.atlassian.com/continuous-delivery/continuous-integration"
+        },
+        {
+          "type": "doc",
+          "name": "Amazon",
+          "resource": "https://aws.amazon.com/devops/continuous-integration/"
+        },
+        {
+          "type": "video",
+          "name": "freeCodeCamp.org",
+          "resource": "https://youtu.be/_zCyLT33moA"
+        }
+      ]
+    },
+    {
+      "id": "serverless",
+      "name": "Serverless",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "Serverless is a cloud-native development model that allows developers to build and run applications without having to manage servers."
+        },
+        {
+          "id": "m2",
+          "description": "In the early days of the web, anyone who wanted to build a web application had to own the physical hardware required to run a server, but now this is not necessary thanks to serverless."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "RedHat",
+          "resource": "https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless"
+        },
+        {
+          "type": "doc",
+          "name": "Cloudfare",
+          "resource": "https://www.cloudflare.com/learning/serverless/what-is-serverless/"
+        },
+        {
+          "type": "video",
+          "name": "IBM Technology",
+          "resource": "https://youtu.be/vxJobGtqKVM"
+        }
+      ]
+    },
+    {
+      "id": "scrapping",
+      "name": "Scrapping",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "Web scraping is an automatic method to obtain large amounts of data from websites."
+        },
+        {
+          "id": "m2",
+          "description": "There are modern tools such as Playwright, Selenium and Puppeteer that can do Web Scrapping."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "Parsehub",
+          "resource": "https://www.parsehub.com/blog/what-is-web-scraping/"
+        },
+        {
+          "type": "video",
+          "name": "The PyCoach",
+          "resource": "https://youtu.be/dlj_QL-ENJM"
         }
       ]
     }

@@ -3,7 +3,7 @@
   import { searchMeaning } from '../utils/searchMeaning'
   import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
 
-  const SUGGESTIONS = ['PR', 'DevOps', 'IDE', 'UX', 'CI', 'CD', 'Serverless', 'Scrapping']
+  const SUGGESTIONS = ['PR', 'DevOps', 'IDE', 'UX', 'CI', 'Serverless', 'Scrapping']
 
   const searchBySuggestion = (suggestion) => {
     inputValue.set(suggestion)
