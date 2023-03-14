@@ -68,7 +68,7 @@
     <input
       on:input={handleChange}
       bind:value={$inputValue}
-      type="input"
+      type="search"
       autofocus
       placeholder="Enter your term"
       class="pl-12 p-2.5 w-full border-none bg-transparent h-12 text-lg outline-none text-gray-300 font-semibold selection:bg-indigo-500"

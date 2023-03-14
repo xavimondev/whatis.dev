@@ -1,5 +1,5 @@
 <script>
-  import Search from '../components/Search.svelte'
+  import InputSearch from './InputSearch.svelte'
   import Suggestions from '../components/Suggestions.svelte'
   import { termDataStore } from '../state/store.js'
 </script>
@@ -11,6 +11,6 @@
 >
   <h1 class="text-white text-4xl sm:text-5xl font-bold">whatis.dev</h1>
   <p class="text-gray-200 text-lg sm:text-1xl mb-2">Enter a term to learn more about it</p>
-  <Search />
+  <InputSearch />
   <Suggestions />
 </section>
