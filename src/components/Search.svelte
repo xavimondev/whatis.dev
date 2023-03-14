@@ -1,12 +1,11 @@
 <script>
   import { onMount } from 'svelte'
   import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
-  import { termDataStore, inputStore } from '../state/store.js'
+  import { termDataStore, inputStore, inputValue } from '../state/store.js'
   import { searchMeaning } from '../utils/searchMeaning'
 
   let timer
   let termDataFound = undefined
-  let inputValue = ''
 
   const debounce = (value) => {
     clearTimeout(timer)
@@ -24,12 +23,14 @@
 
   const handleChange = (e) => {
     const value = e.target.value
+
     if (!value) {
       termDataStore.set(undefined)
       inputStore.set('')
       removeQueryParams('q')
       return
     }
+    inputValue.set(value)
     debounce(value)
   }
 
@@ -40,7 +41,7 @@
     if (hasQuery) {
       termDataFound = searchMeaning(query)
       termDataStore.set(termDataFound)
-      inputValue = query
+      inputValue.set(query)
     }
   })
 </script>
@@ -66,7 +67,7 @@
     <!-- svelte-ignore a11y-autofocus -->
     <input
       on:input={handleChange}
-      bind:value={inputValue}
+      bind:value={$inputValue}
       type="input"
       autofocus
       placeholder="Enter your term"
