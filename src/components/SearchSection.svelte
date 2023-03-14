@@ -5,8 +5,8 @@
 </script>
 
 <section
-  class={`flex flex-col text-center gap-4 w-full justify-center max-w-full sm:max-w-lg ${
-    $termDataStore ? 'animate-delay-200 animate-slideInUp' : 'animate-fadeIn'
+  class={`flex flex-col text-center gap-4 justify-center max-w-xl ${
+    $termDataStore ? 'animate-delay-100 animate-slideInUp' : 'animate-fadeIn'
   }`}
 >
   <h1 class="text-white text-4xl sm:text-5xl font-bold">whatis.dev</h1>

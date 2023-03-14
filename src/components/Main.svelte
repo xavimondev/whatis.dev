@@ -3,5 +3,7 @@
   import SearchSection from '../components/SearchSection.svelte'
 </script>
 
-<SearchSection />
-<ResultsSection />
+<div>
+  <SearchSection />
+  <ResultsSection />
+</div>

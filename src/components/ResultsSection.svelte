@@ -5,7 +5,7 @@
 </script>
 
 {#if $termDataStore}
-  <section class="flex flex-col max-w-xl animate-delay-200 animate-slideInUp">
+  <section class="mt-12 flex flex-col max-w-xl animate-delay-200 animate-slideInUp">
     <h2 class="text-white font-semibold text-2xl mb-8 text-center">
       What is <span class="text-indigo-600"> {$termDataStore.name}</span> ?
     </h2>
@@ -17,7 +17,7 @@
   </section>
 {/if}
 {#if $termDataStore == undefined && $inputStore !== ''}
-  <p class="font-semibold text-xl sm:text-2xl text-white flex items-center gap-1">
-    There is not result for: <span class="text-indigo-900 font-semibold">{$inputStore}</span> 🥲
+  <p class="mt-12 font-semibold text-xl sm:text-2xl text-white text-center selection:bg-indigo-500">
+    There is no result for: <span class="text-indigo-900 font-semibold">{$inputStore}</span> 🥲
   </p>
 {/if}
