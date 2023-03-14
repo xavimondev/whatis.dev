@@ -12,7 +12,7 @@ Look up essential programming terms and master your vocabulary of programming.
 
 - **Client Framework**: [Astro](https://astro.build/) + [Svelte](https://svelte.dev/)
 - **Styles**: [TailwindCSS](https://tailwindcss.com/)
-- **Deployment Web**: [Cloudfare Pages](https://pages.cloudflare.com/)
+- **Deployment Web**: [Netlify](https://www.netlify.com/)
 
 # Run locally
 
