@@ -1,30 +1,10 @@
 ---
-import '@fontsource/space-grotesk/400.css'
-import '@fontsource/space-grotesk/600.css'
-import '@fontsource/space-grotesk/700.css'
+import Base from '../layouts/Base.astro'
 import Main from '../components/Main.svelte'
 ---
 
-<html lang='en'>
-  <head>
-    <meta charset='utf-8' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='viewport' content='width=device-width' />
-    <meta name='generator' content={Astro.generator} />
-    <title>whatis.dev</title>
-    <style>
-      body {
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: normal;
-        font-style: normal;
-        font-display: optional;
-        background-color: hsl(250, 24%, 9%);
-      }
-    </style>
-  </head>
-  <body>
-    <main class='w-full max-w-6xl p-6 m-auto min-h-screen grid place-items-center'>
-      <Main client:load />
-    </main>
-  </body>
-</html>
+<Base>
+  <main class='w-full max-w-6xl p-6 m-auto min-h-screen grid place-items-center'>
+    <Main client:load />
+  </main>
+</Base>
