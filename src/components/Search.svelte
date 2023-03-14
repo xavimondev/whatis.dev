@@ -1,9 +1,8 @@
 <script>
   import { onMount } from 'svelte'
   import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
-  import data from '../data/data.json'
   import { termDataStore, inputStore } from '../state/store.js'
-  const listOfTerms = data.data
+  import { searchMeaning } from '../utils/searchMeaning'
 
   let timer
   let termDataFound = undefined
@@ -12,9 +11,7 @@
   const debounce = (value) => {
     clearTimeout(timer)
     timer = setTimeout(() => {
-      termDataFound = listOfTerms.find((term) =>
-        term.name.toLowerCase().includes(value.toLowerCase())
-      )
+      termDataFound = searchMeaning(value)
       termDataStore.set(termDataFound)
       if (termDataFound) {
         updateQueryParams(value)
@@ -41,7 +38,7 @@
     const query = url.searchParams.get('q')
     const hasQuery = Boolean(query)
     if (hasQuery) {
-      termDataFound = listOfTerms.find((term) => term.name.toLowerCase().includes(query))
+      termDataFound = searchMeaning(query)
       termDataStore.set(termDataFound)
       inputValue = query
     }
