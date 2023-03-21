@@ -187,6 +187,62 @@
           "resource": "https://youtu.be/dlj_QL-ENJM"
         }
       ]
+    },
+    {
+      "id": "edge",
+      "name": "Edge",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "The Edge is a form of serverless environment without cold starts and minimal runtime that allows code execution geographically close to its end users."
+        },
+        {
+          "id": "m2",
+          "description": "“Edge” is a generalized concept for the boundary of the network. Edge computing is a networking philosophy focused on bringing computing as close to the source of data as possible to reduce latency and bandwidth use."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "Cloudfare",
+          "resource": "https://www.cloudflare.com/learning/serverless/glossary/what-is-edge-computing/"
+        },
+        {
+          "type": "doc",
+          "name": "Fireship",
+          "resource": "https://www.youtube.com/watch?v=yOP5-3_WFus&t=211s"
+        }
+      ]
+    },
+    {
+      "id": "srr",
+      "name": "SSR",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "SSR (Server-Side Rendering), is a pre-rendering technique that involves generating the complete HTML of your web application's pages on each request."
+        },
+        {
+          "id": "m2",
+          "description": "With “Server Side Rendering”, the server is doing some extra work. Instead of just sending back JavaScript to the browser and letting it construct the DOM, you are sending the ready HTML and the necessary JavaScript."
+        },
+        {
+          "id": "m3",
+          "description": "This is a useful technique when you need to frequently update and retrieve new data on a web page. Also, the page becomes easily accessible and indexable, resulting in better SEO."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "web.dev",
+          "resource": "https://web.dev/rendering-on-the-web/"
+        },
+        {
+          "type": "doc",
+          "name": "freeCodeCamp.org",
+          "resource": "https://www.freecodecamp.org/news/what-exactly-is-client-side-rendering-and-hows-it-different-from-server-side-rendering-bd5c786b340d/"
+        }
+      ]
     }
   ]
 }
