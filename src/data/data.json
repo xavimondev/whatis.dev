@@ -187,36 +187,6 @@
           "resource": "https://youtu.be/dlj_QL-ENJM"
         }
       ]
-    }, {
-      "id": "serverless",
-      "name": "Serverless",
-      "meanings": [
-        {
-          "id": "m1",
-          "description": "Serverless is a cloud-native development model that allows developers to build and run applications without having to manage servers."
-        },
-        {
-          "id": "m2",
-          "description": "In the early days of the web, anyone who wanted to build a web application had to own the physical hardware required to run a server, but now this is not necessary thanks to serverless."
-        }
-      ],
-      "links": [
-        {
-          "type": "doc",
-          "name": "RedHat",
-          "resource": "https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless"
-        },
-        {
-          "type": "doc",
-          "name": "Cloudfare",
-          "resource": "https://www.cloudflare.com/learning/serverless/what-is-serverless/"
-        },
-        {
-          "type": "video",
-          "name": "IBM Technology",
-          "resource": "https://youtu.be/vxJobGtqKVM"
-        }
-      ]
     },
     {
       "id": "edge",
