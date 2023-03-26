@@ -1,0 +1,10 @@
+---
+import Base from '../../layouts/Base.astro'
+import Main from '../../components/Main.svelte'
+---
+
+<Base>
+  <main class='w-full max-w-6xl p-6 m-auto min-h-screen grid place-items-center'>
+    <Main client:only />
+  </main>
+</Base>
