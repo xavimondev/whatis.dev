@@ -1,7 +1,11 @@
 <script>
+  import { getLangFromUrl, useTranslations } from '../i18n/utils'
   import VideoIc from '../components/icons/VideoIc.svelte'
   import ScreenIc from '../components/icons/ScreenIc.svelte'
   import { termDataStore } from '../state/store.js'
+
+  const lang = getLangFromUrl(new URL(window.location.href))
+  const t = useTranslations(lang)
 </script>
 
 <div class="flex flex-col gap-4">
@@ -17,7 +21,7 @@
       {:else}
         <VideoIc />
       {/if}
-      Learn more about this on <span class="text-indigo-900 font-semibold">{name}</span></a
+      {t('link.text')} <span class="text-indigo-900 font-semibold">{name}</span></a
     >
   {/each}
 </div>

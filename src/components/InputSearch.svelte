@@ -1,11 +1,15 @@
 <script>
   import { onMount } from 'svelte'
+  import { getLangFromUrl, useTranslations } from '../i18n/utils'
   import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
-  import { termDataStore, inputStore, inputValue } from '../state/store.js'
   import { searchMeaning } from '../utils/searchMeaning'
+  import { termDataStore, inputStore, inputValue } from '../state/store.js'
 
   let timer
   let termDataFound = undefined
+
+  const lang = getLangFromUrl(new URL(window.location.href))
+  const t = useTranslations(lang)
 
   const debounce = (value) => {
     clearTimeout(timer)
@@ -70,7 +74,7 @@
       bind:value={$inputValue}
       type="search"
       autofocus
-      placeholder="Enter your term"
+      placeholder={t('search.placeholder')}
       class="pl-12 p-2.5 w-full border-none bg-transparent h-12 text-lg outline-none text-gray-300 font-semibold selection:bg-indigo-500"
     />
   </div>
