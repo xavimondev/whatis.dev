@@ -1,0 +1,13 @@
+---
+import { languages } from '../i18n/ui'
+---
+
+<ul class='flex p-5 gap-3'>
+  {
+    Object.entries(languages).map(([lang, label]) => (
+      <li class='text-white'>
+        <a href={`/${lang}/`}>{label}</a>
+      </li>
+    ))
+  }
+</ul>
