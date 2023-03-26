@@ -1,0 +1,243 @@
+{
+  "data": [
+    {
+      "id": "pr",
+      "name": "PR",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "PR significa Solicitud de Cambios y consiste en enviar todos los cambios o funcionalidades que desarrollaste a un repository remoto."
+        },
+        {
+          "id": "m2",
+          "description": "Con una PR estas notificando a los desarrolladores de tu equipo que has finalizado una funcionalidad de la aplicación."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "GitHub Docs",
+          "resource": "https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"
+        },
+        {
+          "type": "doc",
+          "name": "freeCodeCamp.org",
+          "resource": "https://www.freecodecamp.org/espanol/news/como-hacer-tu-primer-pull-request-en-github/"
+        },
+        {
+          "type": "video",
+          "name": "midulive",
+          "resource": "https://youtu.be/BPns9r76vSI"
+        }
+      ]
+    },
+    {
+      "id": "devops",
+      "name": "DevOps",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "DevOps combina el desarrollo (Dev) y las operaciones (Ops) para unir a personas, procesos y tecnología en el planeamiento de aplicaciones, el desarrollo, la entrega y las operaciones."
+        },
+        {
+          "id": "m2",
+          "description": "Permite la coordinación y colaboración entre roles como desarrollo, operaciones de TI, aseguramiento de la calidad y seguridad."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "Amazon",
+          "resource": "https://aws.amazon.com/es/devops/what-is-devops/"
+        },
+        {
+          "type": "doc",
+          "name": "Microsoft",
+          "resource": "https://learn.microsoft.com/es-es/devops/what-is-devops"
+        }
+      ]
+    },
+    {
+      "id": "ide",
+      "name": "IDE",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "Un entorno de desarrollo integrado (IDE) es una aplicación de software que ayuda a los programadores a desarrollar código de software de manera eficiente."
+        },
+        {
+          "id": "m2",
+          "description": "Los IDE aumentan la productividad del desarrollador al combinar actividades comunes como: editar el código fuente, crear ejecutables y depurar."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "Amazon",
+          "resource": "https://aws.amazon.com/es/what-is/ide/"
+        },
+        {
+          "type": "doc",
+          "name": "RedHat",
+          "resource": "https://www.redhat.com/es/topics/middleware/what-is-ide"
+        }
+      ]
+    },
+    {
+      "id": "ux",
+      "name": "UX",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "UX significa Experiencia de Usuario y se refiere a como las personas interactúan con el producto."
+        },
+        {
+          "id": "m2",
+          "description": "UX se enfoca en comprender de forma profunda los usuarios, sus necesidades, sus habilidades y también sus limitaciones."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "Wix",
+          "resource": "https://es.wix.com/blog/2021/07/que-es-ux"
+        }
+      ]
+    },
+    {
+      "id": "ci",
+      "name": "CI",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "La integración continua (CI) es una práctica de desarrollo de software en la que los desarrolladores combinan los cambios en el código en un repositorio central de forma periódica, tras lo cual se ejecutan versiones y pruebas automáticas."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "Atlassian",
+          "resource": "https://www.atlassian.com/es/continuous-delivery/continuous-integration"
+        },
+        {
+          "type": "doc",
+          "name": "Amazon",
+          "resource": "https://aws.amazon.com/es/devops/continuous-integration"
+        },
+        {
+          "type": "video",
+          "name": "CodelyTV",
+          "resource": "https://youtu.be/SOj64CrWYY8"
+        }
+      ]
+    },
+    {
+      "id": "serverless",
+      "name": "Serverless",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "Serverless(Sin Servidor) y es un modelo de desarrollo nativo de la nube que permite a los desarrolladores crear y ejecutar aplicaciones sin tener que administrar servidores."
+        },
+        {
+          "id": "m2",
+          "description": "En los primeros días de la web, cualquier persona que quisiera crear una aplicación web tenía que poseer el hardware físico necesario para ejecutar un servidor, pero ahora esto no es necesario gracias a serverless."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "RedHat",
+          "resource": "https://www.redhat.com/es/topics/cloud-native-apps/what-is-serverless"
+        },
+        {
+          "type": "video",
+          "name": "Fazt Code",
+          "resource": "https://youtu.be/-ci7EwXaIJg"
+        }
+      ]
+    },
+    {
+      "id": "scrapping",
+      "name": "Scrapping",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "Web scraping es un método para obtener grandes cantidades de datos de forma automática de sitios web."
+        },
+        {
+          "id": "m2",
+          "description": "Hay herramientas modernas como Playwright, Selenium y Puppeteer que pueden hacer Web Scraping."
+        }
+      ],
+      "links": [
+        {
+          "type": "video",
+          "name": "Artificial Corner",
+          "resource": "https://youtu.be/asmAKBsxI4M"
+        },
+        {
+          "type": "video",
+          "name": "midulive",
+          "resource": "https://youtu.be/YjbRkt8cew8"
+        }
+      ]
+    },
+    {
+      "id": "edge",
+      "name": "Edge",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "El Edge(borde) son entornos sin servidor(serverless) que presentan un tiempo de ejecución mínimo que permite la ejecución de código geográficamente cerca a los usuarios finales."
+        },
+        {
+          "id": "m2",
+          "description": "El objetivo del Edge es brindar al usuario un acceso rápido a la información reduciendo la latencia y el uso de ancho de banda."
+        }
+      ],
+      "links": [
+        {
+          "type": "doc",
+          "name": "RedHat",
+          "resource": "https://www.redhat.com/es/topics/edge-computing/what-is-edge-computing"
+        },
+        {
+          "type": "doc",
+          "name": "IBM",
+          "resource": "https://www.ibm.com/es-es/cloud/what-is-edge-computing"
+        }
+      ]
+    },
+    {
+      "id": "srr",
+      "name": "SSR",
+      "meanings": [
+        {
+          "id": "m1",
+          "description": "SSR (Renderizado del lado del servidor), es una técnica de renderización que implica generar el HTML de las páginas en lado del servidor."
+        },
+        {
+          "id": "m2",
+          "description": "Con SSR, el servidor está haciendo un trabajo adicional. En lugar de simplemente enviar JavaScript al navegador y dejar que construya el DOM, está enviando el HTML listo y el JavaScript necesario."
+        },
+        {
+          "id": "m3",
+          "description": "Gracias a SSR la página se vuelve fácilmente accesible e indexable, lo que resulta en un mejor SEO."
+        }
+      ],
+      "links": [
+        {
+          "type": "video",
+          "name": "Fazt",
+          "resource": "https://youtu.be/CnavwJZAMw0"
+        },
+        {
+          "type": "video",
+          "name": "midulive",
+          "resource": "https://youtu.be/YfkJyRFvP1s"
+        }
+      ]
+    }
+  ]
+}
