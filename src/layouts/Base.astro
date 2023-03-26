@@ -2,41 +2,30 @@
 import '@fontsource/space-grotesk/400.css'
 import '@fontsource/space-grotesk/600.css'
 import '@fontsource/space-grotesk/700.css'
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils'
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
-<html lang='en'>
+<html lang={lang}>
   <head>
     <meta charset='utf-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <link rel='icon' type='image/svg+xml' href='/icon/favicon.svg' />
-    <title>Whatis.dev - Look up terms that every developer should know</title>
-    <meta
-      name='description'
-      content='Look up essential programming terms and master your vocabulary of programming'
-    />
+    <title>{t('site.title')}</title>
+    <meta name='description' content={t('site.description')} />
     <meta name='theme-color' content='#13111c' />
     <meta property='og:url' content='https://whatisdev.netlify.app/' />
     <meta property='og:type' content='website' />
-    <meta
-      property='og:title'
-      content='Whatis.dev - Look up terms that every developer should know'
-    />
-    <meta
-      property='og:description'
-      content='Look up essential programming terms and master your vocabulary of programming'
-    />
+    <meta property='og:title' content={t('site.title')} />
+    <meta property='og:description' content={t('site.description')} />
     <meta property='og:image' content='https://whatisdev.netlify.app/ogimage.jpeg' />
     <meta name='twitter:card' content='summary_large_image' />
     <meta name='twitter:site' content='@xavimonp' />
     <meta name='twitter:creator' content='@xavimonp' />
-    <meta
-      name='twitter:title'
-      content='Whatis.dev - Look up terms that every developer should know'
-    />
-    <meta
-      name='twitter:description'
-      content='Look up essential programming terms and master your vocabulary of programming'
-    />
+    <meta name='twitter:title' content={t('site.title')} />
+    <meta name='twitter:description' content={t('site.description')} />
     <style>
       body {
         font-family: 'Space Grotesk', sans-serif;
