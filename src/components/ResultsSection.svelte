@@ -1,4 +1,5 @@
 <script>
+  import { fly } from 'svelte/transition'
   import { getLangFromUrl, useTranslations } from '../i18n/utils'
   import Definitions from './Definitions.svelte'
   import Links from './Links.svelte'
@@ -9,7 +10,10 @@
 </script>
 
 {#if $termDataStore}
-  <section class="mt-12 flex flex-col max-w-xl animate-delay-200 animate-slideInUp">
+  <section
+    class="mt-12 flex flex-col max-w-xl"
+    transition:fly={{ y: 500, duration: 600, delay: 300 }}
+  >
     <h2 class="text-white font-semibold text-2xl mb-8 text-center">
       {t('question.title')} <span class="text-indigo-600"> {$termDataStore.name}</span> ?
     </h2>
