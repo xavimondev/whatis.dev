@@ -50,7 +50,7 @@
 </script>
 
 <div class="flex items-center w-full justify-center">
-  <div class="relative flex items-center w-full border-2 rounded-2xl">
+  <div class="relative flex items-center w-full border rounded-2xl">
     <div class="absolute inset-y items-center pl-3">
       <svg
         class="w-7 h-7 text-gray-300"
