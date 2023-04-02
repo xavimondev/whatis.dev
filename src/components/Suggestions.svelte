@@ -1,14 +1,14 @@
 <script>
-  import { termDataStore, inputStore, inputValue } from '../state/store.js'
+  import { termSelected, inputStore, inputValue } from '../state/store.js'
   import { searchMeaning } from '../utils/searchMeaning'
   import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
 
-  const SUGGESTIONS = ['PR', 'DevOps', 'IDE', 'UX', 'CI', 'Serverless', 'Scrapping', 'Edge', "SSR"]
+  const SUGGESTIONS = ['PR', 'DevOps', 'IDE', 'UX', 'CI', 'Serverless', 'Scrapping', 'Edge', 'SSR']
 
   const searchBySuggestion = (suggestion) => {
     inputValue.set(suggestion)
     const termData = searchMeaning(suggestion)
-    termDataStore.set(termData)
+    termSelected.set(termData)
     if (termData) updateQueryParams(suggestion)
     else {
       inputStore.set(suggestion)
