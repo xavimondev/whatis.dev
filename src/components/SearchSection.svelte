@@ -1,12 +1,25 @@
 <script>
+  import { onMount } from 'svelte'
+  import { termListOptions, termSelected, inputValue } from '../state/store.js'
   import { getLangFromUrl, useTranslations } from '../i18n/utils'
-  import { termListOptions, termSelected } from '../state/store.js'
+  import { searchMeaning } from '../utils/searchMeaning'
   import InputSearch from './InputSearch.svelte'
   import Suggestions from '../components/Suggestions.svelte'
   import ListOptions from '../components/ListOptions.svelte'
 
   const lang = getLangFromUrl(new URL(window.location.href))
   const t = useTranslations(lang)
+
+  onMount(() => {
+    const url = new URL(window.location.href)
+    const query = url.searchParams.get('q')
+    const hasQuery = Boolean(query)
+    if (hasQuery) {
+      const termData = searchMeaning(query)
+      termSelected.set(termData)
+      inputValue.set(query)
+    }
+  })
 </script>
 
 <section

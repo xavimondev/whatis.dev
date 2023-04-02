@@ -1,9 +1,8 @@
 <script>
-  import { onMount } from 'svelte'
   import { termListOptions, inputStore, inputValue, termSelected } from '../state/store.js'
   import { getLangFromUrl, useTranslations } from '../i18n/utils'
   import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
-  import { searchMeaning, listOptionsByTerm } from '../utils/searchMeaning'
+  import { listOptionsByTerm } from '../utils/searchMeaning'
 
   let timer
 
@@ -36,17 +35,6 @@
     }
     debounce(value)
   }
-
-  onMount(() => {
-    const url = new URL(window.location.href)
-    const query = url.searchParams.get('q')
-    const hasQuery = Boolean(query)
-    if (hasQuery) {
-      const termData = searchMeaning(query)
-      termSelected.set(termData)
-      inputValue.set(query)
-    }
-  })
 </script>
 
 <div class="flex items-center w-full justify-center">
