@@ -1,12 +1,11 @@
 <script>
   import { onMount } from 'svelte'
+  import { termListOptions, inputStore, inputValue, termSelected } from '../state/store.js'
   import { getLangFromUrl, useTranslations } from '../i18n/utils'
   import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
-  import { searchMeaning } from '../utils/searchMeaning'
-  import { termDataStore, inputStore, inputValue } from '../state/store.js'
+  import { searchMeaning, listOptionsByTerm } from '../utils/searchMeaning'
 
   let timer
-  let termDataFound = undefined
 
   const lang = getLangFromUrl(new URL(window.location.href))
   const t = useTranslations(lang)
@@ -14,9 +13,9 @@
   const debounce = (value) => {
     clearTimeout(timer)
     timer = setTimeout(() => {
-      termDataFound = searchMeaning(value)
-      termDataStore.set(termDataFound)
-      if (termDataFound) {
+      const listOptions = listOptionsByTerm(value)
+      termListOptions.set(listOptions)
+      if (listOptions.length > 0) {
         updateQueryParams(value)
       } else {
         inputStore.set(value)
@@ -29,12 +28,12 @@
     const value = e.target.value
 
     if (!value) {
-      termDataStore.set(undefined)
+      termListOptions.set([])
       inputStore.set('')
+      termSelected.set(undefined)
       removeQueryParams('q')
       return
     }
-    inputValue.set(value)
     debounce(value)
   }
 
@@ -43,8 +42,8 @@
     const query = url.searchParams.get('q')
     const hasQuery = Boolean(query)
     if (hasQuery) {
-      termDataFound = searchMeaning(query)
-      termDataStore.set(termDataFound)
+      const termData = searchMeaning(query)
+      termSelected.set(termData)
       inputValue.set(query)
     }
   })
