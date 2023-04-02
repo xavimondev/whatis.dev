@@ -15,7 +15,7 @@
 </script>
 
 <div class="absolute rounded-md w-full bg-[#13111C] z-10">
-  <ul class="text-left w-full border rounded-2xl overflow-hidden">
+  <ul class="text-left w-full border rounded-b-2xl border-t-0 overflow-hidden">
     {#each $termListOptions as { item, matches }}
       {@const { name, id } = item}
       {@const [{ indices }] = matches}
