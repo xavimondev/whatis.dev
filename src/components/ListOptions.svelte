@@ -20,12 +20,10 @@
       {@const { name, id } = item}
       {@const [{ indices }] = matches}
       {@const [bestMatch] = indices.sort((a, b) => b[1] - b[0] - (a[1] - a[0]))}
-      {@const html =
-        name.slice(0, bestMatch[0]) +
-        '<span class="bg-yellow-800">' +
-        name.slice(bestMatch[0], bestMatch[1] + 1) +
-        '</span>' +
-        name.slice(bestMatch[1] + 1)}
+      {@const html = `${name.slice(0, bestMatch[0])}<span class="bg-yellow-800">${name.slice(
+        bestMatch[0],
+        bestMatch[1] + 1
+      )}</span>${name.slice(bestMatch[1] + 1)}`}
       <li
         class="font-semibold text-white px-4 py-2.5 hover:bg-indigo-500/30 first:pt-4"
         on:click={() => getMeaning(id)}
