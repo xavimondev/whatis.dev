@@ -1,46 +1,18 @@
 <script>
-  import { termListOptions, inputStore, inputValue, termSelected } from '../state/store.js'
+  import { inputValue } from '../state/store.js'
   import { getLangFromUrl, useTranslations } from '../i18n/utils'
-  import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
-  import { listOptionsByTerm } from '../utils/searchMeaning'
 
-  let timer
+  export let hasOptions
+  export let handleChange
 
   const lang = getLangFromUrl(new URL(window.location.href))
   const t = useTranslations(lang)
-
-  const debounce = (value) => {
-    clearTimeout(timer)
-    timer = setTimeout(() => {
-      const listOptions = listOptionsByTerm(value)
-      termListOptions.set(listOptions)
-      if (listOptions.length > 0) {
-        updateQueryParams(value)
-      } else {
-        inputStore.set(value)
-        removeQueryParams('q')
-      }
-    }, 300)
-  }
-
-  const handleChange = (e) => {
-    const value = e.target.value
-
-    if (!value) {
-      termListOptions.set([])
-      inputStore.set('')
-      termSelected.set(undefined)
-      removeQueryParams('q')
-      return
-    }
-    debounce(value)
-  }
 </script>
 
 <div class="flex items-center w-full justify-center">
   <div
     class={`relative flex items-center w-full border ${
-      $termListOptions.length > 0 ? 'rounded-t-2xl' : 'rounded-2xl'
+      hasOptions ? 'rounded-t-2xl' : 'rounded-2xl'
     }`}
   >
     <div class="absolute inset-y items-center pl-3">

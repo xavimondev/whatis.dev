@@ -1,14 +1,44 @@
 <script>
   import { onMount } from 'svelte'
-  import { termListOptions, termSelected, inputValue } from '../state/store.js'
+  import { termSelected, inputValue, inputStore } from '../state/store.js'
+  import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
   import { getLangFromUrl, useTranslations } from '../i18n/utils'
-  import { searchMeaning } from '../utils/searchMeaning'
+  import { searchMeaning, listOptionsByTerm } from '../utils/searchMeaning'
   import InputSearch from './InputSearch.svelte'
   import Suggestions from '../components/Suggestions.svelte'
   import ListOptions from '../components/ListOptions.svelte'
 
   const lang = getLangFromUrl(new URL(window.location.href))
   const t = useTranslations(lang)
+
+  let timer
+  let termListOptions = []
+
+  const debounce = (value) => {
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+      const listOptions = listOptionsByTerm(value)
+      termListOptions = listOptions
+      if (listOptions.length > 0) {
+        updateQueryParams(value)
+      } else {
+        inputStore.set(value)
+        removeQueryParams('q')
+      }
+    }, 300)
+  }
+
+  const handleChange = (e) => {
+    const value = e.target.value
+    if (!value) {
+      termListOptions = []
+      inputStore.set('')
+      termSelected.set(undefined)
+      removeQueryParams('q')
+      return
+    }
+    debounce(value)
+  }
 
   onMount(() => {
     const url = new URL(window.location.href)
@@ -30,9 +60,9 @@
   <h1 class="text-white text-4xl sm:text-5xl font-bold">whatis.dev</h1>
   <p class="text-gray-200 text-lg sm:text-1xl mb-2">{t('home.subtitle')}</p>
   <div class="relative">
-    <InputSearch />
-    {#if $termListOptions.length > 0}
-      <ListOptions />
+    <InputSearch {handleChange} hasOptions={termListOptions.length > 0} />
+    {#if termListOptions.length > 0}
+      <ListOptions {termListOptions} />
     {/if}
   </div>
   <Suggestions />
