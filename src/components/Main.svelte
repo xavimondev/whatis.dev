@@ -1,6 +1,6 @@
 <script>
-  import ResultsSection from '../components/ResultsSection.svelte'
-  import SearchSection from '../components/SearchSection.svelte'
+  import ResultsSection from './ResultsSection.svelte'
+  import SearchSection from './SearchSection.svelte'
 </script>
 
 <div>

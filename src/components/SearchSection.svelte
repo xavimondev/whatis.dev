@@ -5,8 +5,8 @@
   import { getLangFromUrl, useTranslations } from '../i18n/utils'
   import { searchMeaning, listOptionsByTerm } from '../utils/searchMeaning'
   import InputSearch from './InputSearch.svelte'
-  import Suggestions from '../components/Suggestions.svelte'
-  import ListOptions from '../components/ListOptions.svelte'
+  import Suggestions from './Suggestions.svelte'
+  import ListOptions from './ListOptions.svelte'
 
   const lang = getLangFromUrl(new URL(window.location.href))
   const t = useTranslations(lang)
