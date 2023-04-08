@@ -19,8 +19,9 @@
     timer = setTimeout(() => {
       const listOptions = listOptionsByTerm(value)
       termListOptions = listOptions
-      if (listOptions.length > 0) {
+      if (listOptions.length === 0) {
         inputStore.set(value)
+        termSelected.set(undefined)
       }
     }, 300)
   }
