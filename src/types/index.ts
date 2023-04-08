@@ -4,7 +4,7 @@ interface Meaning {
 }
 
 interface LinkData {
-  type: 'doc' | 'video'
+  type: string
   name: string
   resource: string
 }
@@ -13,5 +13,5 @@ export interface Term {
   id: string
   name: string
   meanings: Meaning[]
-  links: LinkData
+  links: LinkData[]
 }
