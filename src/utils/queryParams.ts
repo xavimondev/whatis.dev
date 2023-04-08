@@ -1,4 +1,4 @@
-export const updateQueryParams = (newQuery) => {
+export const updateQueryParams = (newQuery: string) => {
   const url = new URL(window.location.href)
   const params = new URLSearchParams(url.search.slice(1))
   params.set('q', newQuery)
@@ -9,7 +9,7 @@ export const updateQueryParams = (newQuery) => {
   window.history.pushState(null, '', finalUrl)
 }
 
-export const removeQueryParams = (key) => {
+export const removeQueryParams = (key: string) => {
   const url = new URL(window.location.href)
   const params = new URLSearchParams(url.search.slice(1))
 
