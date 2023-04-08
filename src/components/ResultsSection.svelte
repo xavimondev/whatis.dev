@@ -26,6 +26,6 @@
 {/if}
 {#if $termSelected == undefined && $inputStore !== ''}
   <p class="mt-12 font-semibold text-xl sm:text-2xl text-white text-center selection:bg-indigo-500">
-    {t('error.result')}: <span class="text-indigo-900 font-semibold">{$inputStore}</span> 🥲
+    {t('error.result')}: <span class="text-indigo-500 font-semibold">{$inputStore}</span> 🥲
   </p>
 {/if}
