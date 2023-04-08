@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte'
-  import { termSelected, inputValue, inputStore } from '@state/store.js'
+  import { termSelected, inputValue, inputStore } from '@state/store.ts'
   import { removeQueryParams } from '@utils/queryParams'
   import { searchMeaning, listOptionsByTerm } from '@utils/searchMeaning'
   import { getLangFromUrl, useTranslations } from '@i18n/utils'

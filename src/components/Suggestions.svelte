@@ -1,5 +1,5 @@
 <script>
-  import { termSelected, inputStore, inputValue } from '@state/store.js'
+  import { termSelected, inputStore, inputValue } from '@state/store.ts'
   import { searchMeaning } from '@utils/searchMeaning'
   import { updateQueryParams, removeQueryParams } from '@utils/queryParams'
 

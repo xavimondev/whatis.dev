@@ -1,6 +1,6 @@
 <script>
   import { fly } from 'svelte/transition'
-  import { termSelected, inputStore } from '@state/store.js'
+  import { termSelected, inputStore } from '@state/store.ts'
   import { getLangFromUrl, useTranslations } from '@i18n/utils'
   import Definitions from './Definitions.svelte'
   import Links from './Links.svelte'
