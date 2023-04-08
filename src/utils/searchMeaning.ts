@@ -22,7 +22,7 @@ export const listOptionsByTerm = (query: string) => {
   return fuse.search(query)
 }
 
-export const searchMeaning = (termInput: string) => {
+export const searchMeaning = (termInput: string): Term => {
   const lang = getLangFromUrl(new URL(window.location.href))
   const listOfTerms = data[lang].data
   return listOfTerms.find((term: Term) => term.name.toLowerCase() === termInput.toLowerCase())
