@@ -1,9 +1,9 @@
 <script>
   import { onMount } from 'svelte'
-  import { termSelected, inputValue, inputStore } from '../state/store.js'
-  import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
-  import { getLangFromUrl, useTranslations } from '../i18n/utils'
-  import { searchMeaning, listOptionsByTerm } from '../utils/searchMeaning'
+  import { termSelected, inputValue, inputStore } from '@state/store.js'
+  import { removeQueryParams } from '@utils/queryParams'
+  import { searchMeaning, listOptionsByTerm } from '@utils/searchMeaning'
+  import { getLangFromUrl, useTranslations } from '@i18n/utils'
   import InputSearch from './InputSearch.svelte'
   import Suggestions from './Suggestions.svelte'
   import ListOptions from './ListOptions.svelte'

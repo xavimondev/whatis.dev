@@ -1,6 +1,6 @@
 <script>
-  import { inputValue } from '../state/store.js'
-  import { getLangFromUrl, useTranslations } from '../i18n/utils'
+  import { inputValue } from '@state/store'
+  import { getLangFromUrl, useTranslations } from '@i18n/utils'
 
   export let hasOptions
   export let handleChange

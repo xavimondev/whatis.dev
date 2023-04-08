@@ -1,6 +1,6 @@
 <script>
-  import { termSelected } from '../state/store.js'
-  import { getLangFromUrl, useTranslations } from '../i18n/utils'
+  import { termSelected } from '@state/store.js'
+  import { getLangFromUrl, useTranslations } from '@i18n/utils'
   import VideoIc from './icons/VideoIc.svelte'
   import ScreenIc from './icons/ScreenIc.svelte'
 

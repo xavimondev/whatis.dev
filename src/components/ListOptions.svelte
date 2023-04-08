@@ -1,7 +1,7 @@
 <script>
-  import { termSelected, inputValue } from '../state/store.js'
-  import { searchMeaning } from '../utils/searchMeaning.js'
-  import { updateQueryParams } from '../utils/queryParams.js'
+  import { termSelected, inputValue } from '@state/store.js'
+  import { searchMeaning } from '@utils/searchMeaning.js'
+  import { updateQueryParams } from '@utils/queryParams.js'
 
   export let termListOptions = []
   // Keyboard events

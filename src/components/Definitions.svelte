@@ -1,5 +1,5 @@
 <script>
-  import { termSelected } from '../state/store.js'
+  import { termSelected } from '@state/store'
 </script>
 
 <div class="flex flex-col gap-3 mb-8">

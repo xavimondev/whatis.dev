@@ -1,7 +1,7 @@
 <script>
-  import { termSelected, inputStore, inputValue } from '../state/store.js'
-  import { searchMeaning } from '../utils/searchMeaning'
-  import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
+  import { termSelected, inputStore, inputValue } from '@state/store.js'
+  import { searchMeaning } from '@utils/searchMeaning'
+  import { updateQueryParams, removeQueryParams } from '@utils/queryParams'
 
   const SUGGESTIONS = ['PR', 'DevOps', 'IDE', 'UX', 'CI', 'Serverless', 'Scrapping', 'Edge', 'SSR']
 

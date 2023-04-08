@@ -1,7 +1,7 @@
 import Fuse from 'fuse.js'
-import { getLangFromUrl } from '../i18n/utils'
-import enData from '../i18n/data/en.json'
-import esData from '../i18n/data/es.json'
+import { getLangFromUrl } from '@i18n/utils'
+import enData from '@i18n/data/en.json'
+import esData from '@i18n/data/es.json'
 
 const data = {
   en: enData,
