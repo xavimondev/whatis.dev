@@ -1,7 +1,7 @@
 {
   "name": "whatis.dev",
   "type": "module",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
