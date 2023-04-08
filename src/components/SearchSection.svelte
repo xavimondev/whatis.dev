@@ -20,10 +20,7 @@
       const listOptions = listOptionsByTerm(value)
       termListOptions = listOptions
       if (listOptions.length > 0) {
-        updateQueryParams(value)
-      } else {
         inputStore.set(value)
-        removeQueryParams('q')
       }
     }, 300)
   }
