@@ -1,14 +1,14 @@
 <script>
-  import { termDataStore, inputStore, inputValue } from '../state/store.js'
-  import { searchMeaning } from '../utils/searchMeaning'
-  import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
+  import { termSelected, inputStore, inputValue } from '@state/store.ts'
+  import { searchMeaning } from '@utils/searchMeaning'
+  import { updateQueryParams, removeQueryParams } from '@utils/queryParams'
 
-  const SUGGESTIONS = ['PR', 'DevOps', 'IDE', 'UX', 'CI', 'Serverless', 'Scrapping', 'Edge', "SSR"]
+  const SUGGESTIONS = ['PR', 'DevOps', 'IDE', 'UX', 'CI', 'Serverless', 'Scrapping', 'Edge', 'SSR']
 
   const searchBySuggestion = (suggestion) => {
     inputValue.set(suggestion)
     const termData = searchMeaning(suggestion)
-    termDataStore.set(termData)
+    termSelected.set(termData)
     if (termData) updateQueryParams(suggestion)
     else {
       inputStore.set(suggestion)
@@ -22,7 +22,7 @@
     {#each SUGGESTIONS as suggestion}
       <li>
         <button
-          class="bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110"
+          class="bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110 text-sm sm:text-base"
           on:click={() => searchBySuggestion(suggestion)}>{suggestion}</button
         >
       </li>

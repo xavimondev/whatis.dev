@@ -1,57 +1,20 @@
 <script>
-  import { onMount } from 'svelte'
-  import { getLangFromUrl, useTranslations } from '../i18n/utils'
-  import { updateQueryParams, removeQueryParams } from '../utils/queryParams'
-  import { searchMeaning } from '../utils/searchMeaning'
-  import { termDataStore, inputStore, inputValue } from '../state/store.js'
+  import { inputValue } from '@state/store'
+  import { getLangFromUrl, useTranslations } from '@i18n/utils'
 
-  let timer
-  let termDataFound = undefined
+  export let hasOptions
+  export let handleChange
 
   const lang = getLangFromUrl(new URL(window.location.href))
   const t = useTranslations(lang)
-
-  const debounce = (value) => {
-    clearTimeout(timer)
-    timer = setTimeout(() => {
-      termDataFound = searchMeaning(value)
-      termDataStore.set(termDataFound)
-      if (termDataFound) {
-        updateQueryParams(value)
-      } else {
-        inputStore.set(value)
-        removeQueryParams('q')
-      }
-    }, 300)
-  }
-
-  const handleChange = (e) => {
-    const value = e.target.value
-
-    if (!value) {
-      termDataStore.set(undefined)
-      inputStore.set('')
-      removeQueryParams('q')
-      return
-    }
-    inputValue.set(value)
-    debounce(value)
-  }
-
-  onMount(() => {
-    const url = new URL(window.location.href)
-    const query = url.searchParams.get('q')
-    const hasQuery = Boolean(query)
-    if (hasQuery) {
-      termDataFound = searchMeaning(query)
-      termDataStore.set(termDataFound)
-      inputValue.set(query)
-    }
-  })
 </script>
 
 <div class="flex items-center w-full justify-center">
-  <div class="relative flex items-center w-full border-2 rounded-2xl">
+  <div
+    class={`relative flex items-center w-full border ${
+      hasOptions ? 'rounded-t-2xl' : 'rounded-2xl'
+    }`}
+  >
     <div class="absolute inset-y items-center pl-3">
       <svg
         class="w-7 h-7 text-gray-300"
