@@ -7,14 +7,19 @@
   // Keyboard events
   let hiLiteIndex = null
 
-  const getMeaning = (term) => {
-    const termData = searchMeaning(term)
+  const setState = (termData) => {
+    const { id } = termData
     termSelected.set(termData)
-    inputValue.set(term)
+    inputValue.set(id)
     // Clear options list after user selects a term
-    termListOptions.set([])
+    termListOptions = []
     // Update query param in URL
-    updateQueryParams(term)
+    updateQueryParams(id)
+  }
+
+  const getMeaning = (termId) => {
+    const termData = searchMeaning(termId)
+    setState(termData)
   }
 
   const navigateList = (e) => {
@@ -24,10 +29,7 @@
       hiLiteIndex === 0 ? (hiLiteIndex = termListOptions.length - 1) : (hiLiteIndex -= 1)
     } else if (e.key === 'Enter') {
       const termData = termListOptions.at(hiLiteIndex).item
-      termSelected.set(termData)
-      termListOptions = []
-      updateQueryParams(termData.id)
-      inputValue.set(termData.id)
+      setState(termData)
     } else {
       return
     }
