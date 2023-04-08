@@ -15,7 +15,7 @@
         href={resource}
         target="_blank"
         rel="noopener noreferrer"
-        class="flex bg-indigo-500 py-2.5 px-2 w-full text-white rounded-xl items-center gap-2"
+        class="flex bg-indigo-500 py-2.5 px-2 w-full text-white rounded-xl items-center gap-2 text-sm sm:text-base"
       >
         {#if type === 'doc'}
           <ScreenIc />

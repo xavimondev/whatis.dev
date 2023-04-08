@@ -22,7 +22,7 @@
     {#each SUGGESTIONS as suggestion}
       <li>
         <button
-          class="bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110"
+          class="bg-indigo-600 rounded-xl text-white font-semibold p-2.5 hover:bg-indigo-700 transition hover:scale-110 text-sm sm:text-base"
           on:click={() => searchBySuggestion(suggestion)}>{suggestion}</button
         >
       </li>
