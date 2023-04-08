@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://whatisdev.netlify.app/" target="_blank">
-    <img src="https://whatisdev.netlify.app/ogimage.jpeg" width="100%" alt="Banner" />
+  <a href="https://whatisdev.vercel.app/" target="_blank">
+    <img src="https://whatisdev.vercel.app/ogimage.jpeg" width="100%" alt="Banner" />
   </a>
 </p>
 
@@ -12,7 +12,7 @@ Look up essential programming terms and master your vocabulary of programming.
 
 - **Client Framework**: [Astro](https://astro.build/) + [Svelte](https://svelte.dev/)
 - **Styles**: [TailwindCSS](https://tailwindcss.com/)
-- **Deployment Web**: [Netlify](https://www.netlify.com/)
+- **Deployment Web**: [Vercel](https://www.vercel.com/)
 
 # Run locally
 
