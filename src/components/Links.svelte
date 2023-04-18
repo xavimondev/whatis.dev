@@ -22,7 +22,7 @@
         {:else}
           <VideoIc />
         {/if}
-        {t('link.text')} <span class="text-indigo-900 font-semibold">{name}</span></a
+        {t('link.text')} <span class="text-[#08031f] font-semibold">{name}</span></a
       >
     {/each}
   {/if}
